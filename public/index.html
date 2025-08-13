@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive To-Do Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background">
+        <div class="particles"></div>
+    </div>
+
+    <div class="dashboard">
+        <header>
+            <h1><i class="fas fa-tasks pulse"></i> To Do List</h1>
+            <div class="stats">
+                <span id="pending-count">0</span> pending •
+                <span id="completed-count">0</span> completed
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="input-container">
+            <div class="add-task">
+                <input type="text" id="todo-input" placeholder="✍️ What needs to be done?">
+                <button id="add-btn"><i class="fas fa-plus bounce"></i> Add</button>
+            </div>
+
+            <div class="task-history">
+                <div class="history-header">
+                    <h3><i class="fas fa-history spin"></i> Your Task History</h3>
+                    <button id="clear-history"><i class="fas fa-trash shake"></i></button>
+                </div>
+                <div class="history-tasks"></div>
+            </div>
+        </div>
+
+        <div class="task-boards">
+            <div class="task-column pending-column">
+                <h2><i class="fas fa-hourglass-half flip"></i> Pending</h2>
+                <ul id="pending-list"></ul>
+            </div>
+            <div class="task-column completed-column">
+                <h2><i class="fas fa-check-circle pulse"></i> Completed</h2>
+                <ul id="completed-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Keamogetose Sele</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

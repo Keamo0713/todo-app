@@ -1,8 +1,7 @@
 # Interactive To-Do List App
 
-![App Screenshot](https://i.imgur.com/JQZ4Yl.png)
 
-A feature-rich to-do list application with task history, completion tracking, and interactive UI elements.
+
 
 ## Features
 

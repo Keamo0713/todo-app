@@ -3,7 +3,7 @@ services:
     name: todo-app
     runtime: node
     rootDirectory: /
-    buildCommand: npm install 
+    buildCommand: npm install
     startCommand: node server.js
     env: node
     healthCheckPath: /

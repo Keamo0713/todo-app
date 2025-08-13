@@ -10,27 +10,30 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "server.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "public/$1"
-    },
-    {
-      "src": "/",
-      "dest": "public/index.html"
-    }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  },
   "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "server.js"
+    },
     {
       "source": "/(.*)",
       "destination": "/public/$1"
     }
-  ]
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "env": {
+    "NODE_ENV": "production"
+  }
 }

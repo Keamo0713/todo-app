@@ -20,9 +20,7 @@
 - **Styling**: CSS Animations, Font Awesome Icons
 - **Deployment**: Vercel
 
-## Live Demo
 
-[View Live Demo on Render](todo-app-ipv0.onrender.com/)
 
 ## Installation
 
